@@ -118,8 +118,8 @@ try:
         INA_RIGHT.off()
         INB_RIGHT.off()
 
-        # Pause between cycles, since I have loop
-        sleep(2)
+        #stops loop
+        break
 
 except KeyboardInterrupt:
     # Ensure motors stop if interrupted

@@ -30,7 +30,6 @@ try:
         ramp_time = 4  # 4 seconds for ramping up and down
         
         # Ramp up both motors for forward direction
-        print("Ramp up forward started.")
         start_time = time()
         while time() - start_time < ramp_time:
             elapsed_time = time() - start_time
@@ -51,7 +50,6 @@ try:
             sleep(0.1)
 
         # Slow down both motors for forward direction
-        print("Slow down forward started.")
         start_time = time()
         while time() - start_time < ramp_time:
             elapsed_time = time() - start_time
@@ -72,7 +70,6 @@ try:
             sleep(0.1)
 
         # Ramp up both motors for backwards direction
-        print("Ramp up backward started.")
         start_time = time()
         while time() - start_time < ramp_time:
             elapsed_time = time() - start_time
@@ -93,7 +90,6 @@ try:
             sleep(0.1)
 
         # Slow down both motors for backwards direction
-        print("Slow down backward started.")
         start_time = time()
         while time() - start_time < ramp_time:
             elapsed_time = time() - start_time
@@ -114,7 +110,6 @@ try:
             sleep(0.1)
 
         # Stop both motors
-        print("Motors stopped.")
         PWM_LEFT.duty_u16(0)
         PWM_RIGHT.duty_u16(0)
         INA_LEFT.off()
@@ -122,7 +117,7 @@ try:
         INA_RIGHT.off()
         INB_RIGHT.off()
 
-        # Pause between cycles if needed
+        # Pause between cycles, since I have loop
         sleep(2)
 
 except KeyboardInterrupt:

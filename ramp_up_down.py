@@ -11,6 +11,7 @@ Stop motors.
 from machine import Pin, PWM
 from time import sleep, time
 
+# SETUP
 # Configure pins for left motor
 INA_LEFT = Pin(7, Pin.OUT)
 INB_LEFT = Pin(8, Pin.OUT)
@@ -23,6 +24,7 @@ INB_RIGHT = Pin(12, Pin.OUT)
 PWM_RIGHT = PWM(Pin(10))
 PWM_RIGHT.freq(1000)
 
+# LOOP
 try:
     while True:
         ramp_time = 4  # 4 seconds for ramping up and down

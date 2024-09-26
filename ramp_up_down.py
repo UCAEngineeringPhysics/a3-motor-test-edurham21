@@ -25,6 +25,17 @@ PWM_RIGHT.freq(1000)
 INA_RIGHT.off()
 INB_RIGHT.off()
 
+#set max duty
+max_duty = 65025
+
+#set ramp time
 ramp_time = 4
+
+#set step size
+step_size = 500
+steps = max_duty // step_size #integer division to find steps
+
+#calculate time to sleep for each step
+ramp_step = ramp_time / steps
 
 # LOOP

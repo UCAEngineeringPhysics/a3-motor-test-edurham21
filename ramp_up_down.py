@@ -7,6 +7,7 @@ Stop motors.
 """
 
 #ChatGPT added a timer for the ramp up and ramp down time
+#I used my microcontrollers program as a reference for this. 
 
 from machine import Pin, PWM
 from time import sleep, time

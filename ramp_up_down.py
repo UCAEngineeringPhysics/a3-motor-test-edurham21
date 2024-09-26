@@ -25,4 +25,6 @@ PWM_RIGHT.freq(1000)
 INA_RIGHT.off()
 INB_RIGHT.off()
 
+ramp_time = 4
+
 # LOOP
